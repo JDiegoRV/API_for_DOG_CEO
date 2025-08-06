@@ -19,15 +19,15 @@ First you need to temporarily change the execution policy to allow the virtual e
 ```
 Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 ```
-```
 PowerShell:
+```
 python -m venv venv
 ```
-3. Activate the virtual environment in your terminal with the proyect
+Activate the virtual environment in your terminal with the proyect
 ```
 venv\Scripts\Activate.ps1
 ```
-4. For install dependencies from the `requirements.txt` open your terminal and execute:
+3. For install dependencies from the `requirements.txt` open your terminal and execute:
 ```
 pip install -r requirements.txt
 ```
