@@ -33,6 +33,9 @@ venv\Scripts\Activate.ps1
 ```
 pip install -r requirements.txt
 ```
+
+---
+
 # How to set up MongoDB locally
 
 Download and Install MongoDB
@@ -42,17 +45,21 @@ https://www.mongodb.com/try/download/community
 
 MongoDB will run on the default connection string and when you send the first request of a dog breed MongoDB will automatically create the database and the collection.
 
+---
+
 # How to run the FastAPI server locally.
 
-### 1. With MongoDB installed and the requirements.txt dependencies, we now run the FastAPI server locally in your terminal with:
+With MongoDB installed and the requirements.txt dependencies, we now run the FastAPI server locally in your terminal with:
 ```
 uvicorn app.main:app --reload
 ```
-### 2. The server will then be available at "http://127.0.0.1:8000"
+The server will then be available at "http://127.0.0.1:8000"
 
-### 3. Now you can use Postman or the SwaggerUI to make requests to the endpoints 
+Now you can use Postman or the SwaggerUI to make requests to the endpoints 
 
-### 4. ENDPOINTS:
+---
+
+### ENDPOINTS:
 
 ###  POST /login 
 
