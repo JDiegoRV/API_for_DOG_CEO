@@ -4,22 +4,26 @@ An internal FastAPI server that connects to the DOG CEO API (https://dog.ceo/dog
 
 # Install Dependecies
 
-1. You need Python 3.13.5 installed on your machine.
+1. You need Python 3.11+ installed on your machine.
 
 2. Create a virtual environment
 
+First you need to temporarily change the execution policy to allow the virtual environment activation script to run..
+```
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
 In PowerShell:
-
+```
 python -m venv venv
-
+```
 3. Activate the virtual environment in your terminal with the proyect
-
+```
 venv\Scripts\Activate.ps1
-
+```
 4. For install dependencies from the `requirements.txt` open your terminal and execute:
-
+```
 pip install -r requirements.txt
-
+```
 # How to set up MongoDB locally
 
 1. Download and Install MongoDB
@@ -32,37 +36,37 @@ https://www.mongodb.com/try/download/community
 # How to run the FastAPI server locally.
 
 1. With MongoDB installed and the requirements.txt dependencies, we now run the FastAPI server locally in your terminal with:
-
+```
 uvicorn app.main:app --reload
-
+```
 2. The server will then be available at "http://127.0.0.1:8000"
 
 3. Now you can use Postman or the SwaggerUI to make requests to the endpoints 
 
 4. ENDPOINTS:
 
-  # POST /login 
+  a. POST /login 
 
 You need to introduce in the body:
-
+```
   {
   "username": "admin",
   "password": "admin"
   }
-
+```
 With this your are going to receive a "access_token" that you will need for the other GET type requests (this has the default duration)
 
 For use this in POSTMAN, when you make a GET type request you need to go to the "Authorization" and select "Bearer Token" and put the token you receive before you send the request or you are gonna receive "an Invalid or missing JWT token" mesagge.
 
 With SwaggerUI, you have a green button in the upper right corner that says "Authorization", click it and enter the token you received, with this all your GET requests will be authorized
 
-  # GET /dog/breed/{breed_name}
+  b. GET /dog/breed/{breed_name}
 
 First you need authorization with a token obtained with the POST /login request.
 
 When you make the request, you need to enter the name of a valid dog's breed. With this, you will receive, as a user, only the URL with a random image of a dog's breed you requested. All other data obtained will be saved in the database (timestap, status, and the name of the dog's breed).
 
-  # GET /dog/stats
+  c. GET /dog/stats
 
 First you need authorization with a token obtained with the POST /login request.
 
@@ -73,9 +77,9 @@ When you make the request, you will receive a list of up to 10 of the most reque
 This project includes unit tests located in the test_main.py file.
 
 1. Run the tests using:
-
+```
 pytest
-
+```
 If all tests pass, you will see no errors in the output.
 
 # The test suite includes the following tests:
@@ -95,8 +99,6 @@ Checks that the returned JSON contains an image_url starting with https://.
 Directly calls the save_dog_request function to insert a test entry into MongoDB.
 
 Ensures the function executes without raising any exceptions.
-
-(All data entered by the test is discarded so that it does not interfere with requests such as GET /dog/stats)
 
 # Swagger configuration file
 
