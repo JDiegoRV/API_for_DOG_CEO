@@ -35,12 +35,12 @@ pip install -r requirements.txt
 ```
 # How to set up MongoDB locally
 
-### 1. Download and Install MongoDB
+Download and Install MongoDB
 
 Go to the official MongoDB Community Edition download page:
 https://www.mongodb.com/try/download/community
 
-### 2. MongoDB will run on the default connection string and when you send the first request of a dog breed MongoDB will automatically create the database and the collection.
+MongoDB will run on the default connection string and when you send the first request of a dog breed MongoDB will automatically create the database and the collection.
 
 # How to run the FastAPI server locally.
 
