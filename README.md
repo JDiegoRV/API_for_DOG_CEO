@@ -15,7 +15,7 @@ bash
 git clone https://github.com/JDiegoRV/API_for_DOG_CEO.git
 cd API_for_DOG_CEO
 ```
-2. Create a virtual environment
+### 2. Create a virtual environment
 
 First you need to temporarily change the execution policy to allow the virtual environment activation script to run..
 ```
@@ -29,32 +29,32 @@ Activate the virtual environment in your terminal with the proyect
 ```
 venv\Scripts\Activate.ps1
 ```
-3. For install dependencies from the `requirements.txt` open your terminal and execute:
+### 3. For install dependencies from the `requirements.txt` open your terminal and execute:
 ```
 pip install -r requirements.txt
 ```
 # How to set up MongoDB locally
 
-1. Download and Install MongoDB
+### 1. Download and Install MongoDB
 
 Go to the official MongoDB Community Edition download page:
 https://www.mongodb.com/try/download/community
 
-2. MongoDB will run on the default connection string and when you send the first request of a dog breed MongoDB will automatically create the database and the collection.
+### 2. MongoDB will run on the default connection string and when you send the first request of a dog breed MongoDB will automatically create the database and the collection.
 
 # How to run the FastAPI server locally.
 
-1. With MongoDB installed and the requirements.txt dependencies, we now run the FastAPI server locally in your terminal with:
+### 1. With MongoDB installed and the requirements.txt dependencies, we now run the FastAPI server locally in your terminal with:
 ```
 uvicorn app.main:app --reload
 ```
-2. The server will then be available at "http://127.0.0.1:8000"
+### 2. The server will then be available at "http://127.0.0.1:8000"
 
-3. Now you can use Postman or the SwaggerUI to make requests to the endpoints 
+### 3. Now you can use Postman or the SwaggerUI to make requests to the endpoints 
 
-4. ENDPOINTS:
+### 4. ENDPOINTS:
 
-  a. POST /login 
+###  POST /login 
 
 You need to introduce in the body:
 ```
