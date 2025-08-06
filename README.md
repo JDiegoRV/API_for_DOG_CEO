@@ -17,13 +17,13 @@ In PowerShell:
 python -m venv venv
 ```
 3. Activate the virtual environment in your terminal with the proyect
-
+```
 venv\Scripts\Activate.ps1
-
+```
 4. For install dependencies from the `requirements.txt` open your terminal and execute:
-
+```
 pip install -r requirements.txt
-
+```
 # How to set up MongoDB locally
 
 1. Download and Install MongoDB
@@ -36,9 +36,9 @@ https://www.mongodb.com/try/download/community
 # How to run the FastAPI server locally.
 
 1. With MongoDB installed and the requirements.txt dependencies, we now run the FastAPI server locally in your terminal with:
-
+```
 uvicorn app.main:app --reload
-
+```
 2. The server will then be available at "http://127.0.0.1:8000"
 
 3. Now you can use Postman or the SwaggerUI to make requests to the endpoints 
@@ -48,12 +48,12 @@ uvicorn app.main:app --reload
   a. POST /login 
 
 You need to introduce in the body:
-
+```
   {
   "username": "admin",
   "password": "admin"
   }
-
+```
 With this your are going to receive a "access_token" that you will need for the other GET type requests (this has the default duration)
 
 For use this in POSTMAN, when you make a GET type request you need to go to the "Authorization" and select "Bearer Token" and put the token you receive before you send the request or you are gonna receive "an Invalid or missing JWT token" mesagge.
@@ -77,9 +77,9 @@ When you make the request, you will receive a list of up to 10 of the most reque
 This project includes unit tests located in the test_main.py file.
 
 1. Run the tests using:
-
+```
 pytest
-
+```
 If all tests pass, you will see no errors in the output.
 
 # The test suite includes the following tests:
@@ -99,8 +99,6 @@ Checks that the returned JSON contains an image_url starting with https://.
 Directly calls the save_dog_request function to insert a test entry into MongoDB.
 
 Ensures the function executes without raising any exceptions.
-
-(All data entered by the test is discarded so that it does not interfere with requests such as GET /dog/stats)
 
 # Swagger configuration file
 
