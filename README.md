@@ -59,7 +59,7 @@ Now you can use Postman or the SwaggerUI to make requests to the endpoints
 
 ---
 
-### ENDPOINTS:
+# ENDPOINTS:
 
 ###  POST /login 
 
@@ -76,31 +76,33 @@ For use this in POSTMAN, when you make a GET type request you need to go to the 
 
 With SwaggerUI, you have a green button in the upper right corner that says "Authorization", click it and enter the token you received, with this all your GET requests will be authorized
 
-  b. GET /dog/breed/{breed_name}
+### GET /dog/breed/{breed_name}
 
 First you need authorization with a token obtained with the POST /login request.
 
 When you make the request, you need to enter the name of a valid dog's breed. With this, you will receive, as a user, only the URL with a random image of a dog's breed you requested. All other data obtained will be saved in the database (timestap, status, and the name of the dog's breed).
 
-  c. GET /dog/stats
+### GET /dog/stats
 
 First you need authorization with a token obtained with the POST /login request.
 
 When you make the request, you will receive a list of up to 10 of the most requested dogs with the request GET /dog/breed/{breed_name}, which will show the name of the breed and the number of requests.
 
+---
+
 # How to run the pytest tests.
 
 This project includes unit tests located in the test_main.py file.
 
-1. Run the tests using:
+Run the tests using:
 ```
 pytest
 ```
 If all tests pass, you will see no errors in the output.
 
-# The test suite includes the following tests:
+## The test suite includes the following tests:
 
- 1. test_dog_breed_success
+### test_dog_breed_success
 
 Logs in to obtain a valid JWT access token.
 
@@ -110,11 +112,13 @@ Verifies that the response status is 200 OK.
 
 Checks that the returned JSON contains an image_url starting with https://.
 
- 2. test_save_dog_request
+### test_save_dog_request
 
 Directly calls the save_dog_request function to insert a test entry into MongoDB.
 
 Ensures the function executes without raising any exceptions.
+
+---
 
 # Swagger configuration file
 
