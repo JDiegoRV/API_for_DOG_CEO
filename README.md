@@ -1,17 +1,19 @@
 # API for DOG CEO
 
-An internal FastAPI server that connects to the DOG CEO API (https://dog.ceo/dog-api/) and stores dog image requests in a MongoDB database and need JWT authentication for all endpoints.
+An internal **FastAPI** server that connects to the [DOG CEO API](https://dog.ceo/dog-api/) and stores dog image requests in a **MongoDB** database. All endpoints require **JWT authentication**.
 
-# Install Dependecies
+---
 
-1. First, clone this repository to your local machine:
+## Install Dependencies
 
-You need Python 3.11+ installed on your machine.
+### 1. Clone the Repository
+
+Make sure you have **Python 3.11+** installed.
 
 ```bash
 git clone https://github.com/JDiegoRV/API_for_DOG_CEO.git
 cd API_for_DOG_CEO
-```
+
 
 2. Create a virtual environment
 
