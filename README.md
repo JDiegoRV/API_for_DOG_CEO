@@ -41,7 +41,7 @@ uvicorn app.main:app --reload
 
 4. ENDPOINTS:
 
-  # POST /login 
+  a. POST /login 
 
 You need to introduce in the body:
 
@@ -56,13 +56,13 @@ For use this in POSTMAN, when you make a GET type request you need to go to the 
 
 With SwaggerUI, you have a green button in the upper right corner that says "Authorization", click it and enter the token you received, with this all your GET requests will be authorized
 
-  # GET /dog/breed/{breed_name}
+  b. GET /dog/breed/{breed_name}
 
 First you need authorization with a token obtained with the POST /login request.
 
 When you make the request, you need to enter the name of a valid dog's breed. With this, you will receive, as a user, only the URL with a random image of a dog's breed you requested. All other data obtained will be saved in the database (timestap, status, and the name of the dog's breed).
 
-  # GET /dog/stats
+  c. GET /dog/stats
 
 First you need authorization with a token obtained with the POST /login request.
 
