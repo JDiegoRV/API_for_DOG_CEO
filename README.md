@@ -4,9 +4,13 @@ An internal FastAPI server that connects to the DOG CEO API (https://dog.ceo/dog
 
 # Install Dependecies
 
-1. You need Python 3.13.5 installed on your machine.
+1. You need Python 3.11+ installed on your machine.
 
 2. Create a virtual environment
+
+First you need to temporarily change the execution policy to allow the virtual environment activation script to run..
+
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
 
 In PowerShell:
 
