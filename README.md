@@ -10,11 +10,11 @@ An internal **FastAPI** server that connects to the [DOG CEO API](https://dog.ce
 
 Make sure you have **Python 3.11+** installed.
 
-```bash
+bash
+```
 git clone https://github.com/JDiegoRV/API_for_DOG_CEO.git
 cd API_for_DOG_CEO
-
-
+```
 2. Create a virtual environment
 
 First you need to temporarily change the execution policy to allow the virtual environment activation script to run..
